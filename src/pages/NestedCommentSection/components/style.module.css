@@ -1,5 +1,9 @@
 .comment-text-area-container {
   min-width: 30rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  row-gap: 0.5rem;
   .comment-text-area {
     width: 100%;
     padding: 1rem;
@@ -10,7 +14,8 @@
   }
   .add-comment-button {
     width: 6rem;
-    float: inline-end;
+    height: 2.5rem;
+    margin-left: auto;
   }
 }
 

@@ -1,9 +1,15 @@
 import { useState } from "react";
 import CommentTextArea from "./components/CommentTextArea";
 
-import style from "./style.module.css";
+//* Import components
 import nestedCommentsData from "../../assets/data/NestedCommentsSection.json";
 import CommentsList from "./components/CommentsList";
+
+//* Import utils
+import { insertNewCommentAtId } from "./utils";
+
+//* Import styles
+import style from "./style.module.css";
 
 function NestedCommentSection() {
   const [newComment, setNewComment] = useState("");
@@ -13,20 +19,26 @@ function NestedCommentSection() {
     setNewComment(e.target.value);
   }
 
-  function handleAddNewComment() {
+  function handleAddNewComment(parentId, newComment) {
+    const updatedComments = insertNewCommentAtId(
+      comments,
+      parentId,
+      newComment
+    );
+    console.log(updatedComments);
+    setComments(updatedComments);
     setNewComment("");
-    console.log("ADDED NEW COMMENT");
   }
 
   return (
     <section className={style["nested-comment-section-container"]}>
       <CommentTextArea
-        placeholder="Add new a comment"
+        placeholder="Add a new reply"
         value={newComment}
         onChange={handleNewCommentTextChange}
         onAddComment={handleAddNewComment}
       />
-      <CommentsList data={comments} />
+      <CommentsList data={comments} onAddComment={handleAddNewComment} />
     </section>
   );
 }
