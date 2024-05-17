@@ -1,0 +1,30 @@
+.tab-buttons-container {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+}
+
+.tabs-buttons {
+  border-radius: 0px;
+}
+
+.tabs-buttons:hover {
+  color: lightblue;
+  outline: unset;
+  border: none;
+}
+
+.tabs-buttons:focus {
+  border: 1px solid lightblue;
+  outline: unset;
+}
+
+.active {
+  color: lightblue;
+  border-bottom: 1px solid lightblue !important;
+}
+
+.active:focus {
+  border: unset;
+  outline: unset;
+}
