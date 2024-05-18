@@ -8,6 +8,7 @@ TabBar.propTypes = {
   variant: PropTypes.string,
   activeTab: PropTypes.number,
   onChange: PropTypes.func.isRequired,
+  onDeleteTab: PropTypes.func.isRequired,
 };
 
 function TabBar({
@@ -15,6 +16,7 @@ function TabBar({
   variant = "normal",
   activeTab = 1,
   onChange = () => {},
+  onDeleteTab = () => {},
 }) {
   return (
     <section className={style["tab-buttons-container"]}>
@@ -28,9 +30,11 @@ function TabBar({
                 key={item.id}
                 label={item.title}
                 id={item.id}
-                onClick={onChange}
                 isActive={item.id === activeTab}
-                style={{ width: buttonWidth }}
+                style={{ width: buttonWidth, ...item?.style }}
+                additionalProps={item?.additionalProps ?? {}}
+                onClick={onChange}
+                onDelete={onDeleteTab}
               />
             );
           })

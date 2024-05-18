@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 
+//* Import styles
 import styleObj from "./style.module.css";
 
 TabButton.propTypes = {
@@ -8,7 +9,9 @@ TabButton.propTypes = {
   id: PropTypes.string.isRequired,
   isActive: PropTypes.bool,
   style: PropTypes.style,
+  additionalProps: PropTypes.any,
   onClick: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
 };
 
 function TabButton({
@@ -16,20 +19,27 @@ function TabButton({
   id = "",
   isActive = false,
   style = {},
+  additionalProps = {},
   onClick = () => {},
+  onDelete = () => {},
 }) {
-  console.log("id", id, isActive);
   return (
-    <button
-      id={id}
-      onClick={onClick}
-      className={`${styleObj["tabs-buttons"]} ${
-        isActive ? styleObj["active"] : ""
-      }`}
+    <div
+      className={style["tab-button-container"]}
       style={{ ...style, minWidth: "20%" }}
     >
-      {label}
-    </button>
+      <button
+        id={id}
+        onClick={onClick}
+        className={`${styleObj["tab-button"]} ${
+          isActive ? styleObj["active"] : ""
+        }`}
+        disabled={additionalProps?.isDisabled} //* additional prop for disabling button
+      >
+        {label}
+      </button>
+      {additionalProps?.isRemovable && <button onClick={onDelete}>x</button>}
+    </div>
   );
 }
 

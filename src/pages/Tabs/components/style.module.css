@@ -2,26 +2,29 @@
   width: 100%;
   display: flex;
   overflow-x: auto;
+  border-bottom: 1px solid #f0f0ff;
 }
 
-.tabs-buttons {
+.tab-button {
   border-radius: 0px;
+  background-color: transparent;
+  width: 100%;
 }
 
-.tabs-buttons:hover {
+.tab-button:hover {
   color: lightblue;
   outline: unset;
   border: none;
 }
 
-.tabs-buttons:focus {
+.tab-button:focus {
   border: 1px solid lightblue;
   outline: unset;
 }
 
 .active {
   color: lightblue;
-  border-bottom: 1px solid lightblue !important;
+  border-bottom: 2.5px solid lightblue !important;
 }
 
 .active:focus {
