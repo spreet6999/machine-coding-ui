@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import NestedCommentSection from "../pages/NestedCommentSection";
 import Tabs from "../pages/Tabs";
 import ProgressBar from "../pages/ProgressBar";
+import StopWatch from "../pages/StopWatch";
 
 function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ function AppRoutes() {
           <Route path="/nested-comments" element={<NestedCommentSection />} />
           <Route path="/tabs" element={<Tabs />} />
           <Route path="/progressbar" element={<ProgressBar />} />
+          <Route path="/stopwatch" element={<StopWatch />} />
         </Route>
       </Routes>
     </BrowserRouter>
