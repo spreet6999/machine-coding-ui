@@ -5,6 +5,7 @@ import NestedCommentSection from "../pages/NestedCommentSection";
 import Tabs from "../pages/Tabs";
 import ProgressBar from "../pages/ProgressBar";
 import StopWatch from "../pages/StopWatch";
+import StarRating from "../pages/StarRating";
 
 function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ function AppRoutes() {
           <Route path="/tabs" element={<Tabs />} />
           <Route path="/progressbar" element={<ProgressBar />} />
           <Route path="/stopwatch" element={<StopWatch />} />
+          <Route path="/star-rating" element={<StarRating />} />
         </Route>
       </Routes>
     </BrowserRouter>
