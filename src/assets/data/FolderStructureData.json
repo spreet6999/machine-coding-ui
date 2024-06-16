@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "name": "root",
+    "isFolder": true,
+    "items": [
+      {
+        "id": "1_0",
+        "name": "public",
+        "isFolder": true,
+        "items": [
+          {
+            "id": "1_0_0",
+            "name": "index.html",
+            "isFolder": false,
+            "items": null
+          }
+        ]
+      },
+      {
+        "id": "1_1",
+        "name": "src",
+        "isFolder": true,
+        "items": [
+          {
+            "id": "1_1_0",
+            "name": "index.jsx",
+            "isFolder": false,
+            "items": []
+          },
+          {
+            "id": "1_1_1",
+            "name": "App.jsx",
+            "isFolder": false,
+            "items": []
+          }
+        ]
+      },
+      {
+        "id": "1_2",
+        "name": "package.json",
+        "isFolder": false,
+        "items": null
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "root2",
+    "isFolder": true,
+    "items": [
+      {
+        "id": "2_0",
+        "name": "public",
+        "isFolder": true,
+        "items": [
+          {
+            "id": "2_0_0",
+            "name": "index.html",
+            "isFolder": false,
+            "items": null
+          }
+        ]
+      },
+      {
+        "id": "2_1",
+        "name": "src",
+        "isFolder": true,
+        "items": [
+          {
+            "id": "2_1_0",
+            "name": "index.jsx",
+            "isFolder": false,
+            "items": []
+          },
+          {
+            "id": "2_1_1",
+            "name": "App.jsx",
+            "isFolder": false,
+            "items": []
+          }
+        ]
+      },
+      {
+        "id": "2_2",
+        "name": "package.json",
+        "isFolder": false,
+        "items": null
+      }
+    ]
+  }
+]
