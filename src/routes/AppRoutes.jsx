@@ -7,7 +7,9 @@ import ProgressBar from "../pages/ProgressBar";
 import StopWatch from "../pages/StopWatch";
 import StarRating from "../pages/StarRating";
 import FolderStructure from "../pages/FolderStructure";
+import { AutoCompleteContainer } from "../pages/AutoComplete";
 
+//* Import utils/data
 import folderStructureData from "../assets/data/FolderStructureData.json";
 
 function AppRoutes() {
@@ -25,6 +27,7 @@ function AppRoutes() {
             path="/folder-structure"
             element={<FolderStructure explorerData={folderStructureData} />}
           />
+          <Route path="/autocomplete" element={<AutoCompleteContainer />} />
         </Route>
       </Routes>
     </BrowserRouter>
